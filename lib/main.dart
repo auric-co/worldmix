@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Worldmix',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.purple),
       home: HomeWidget(),
     );
@@ -51,7 +52,6 @@ class CounterController extends MomentumController<CounterModel> {
   void increment() {
     var value = model.value; // grab the current value
     model.update(value: value + 1); // update state (rebuild widgets)
-    print(model.value); // new or updated value
   }
 }
 
@@ -79,7 +79,7 @@ class HomeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Momentum Counter'),
+        title: Text('Worldmix'),
       ),
       body: Center(
         child: Column(
